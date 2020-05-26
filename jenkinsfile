@@ -19,8 +19,19 @@ pipeline {
                 
             }
         }
-        
+       
+         stages {
+        stage("Second step") {
+            steps {
+                sh 'cd /test1 '
+                sh 'ls -al'
+                
+                
+                
+            }
+        }
      }
+   }
 
 
-}
+
