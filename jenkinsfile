@@ -10,28 +10,16 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr: '10', artifactNumToKeepStr: '10'))
         timestamps()
     }
-    stages {
+   stages {
         stage("First step") {
             steps {
                 sh 'ssh root@192.168.1.37 '
-                
-                
-                
             }
         }
-       
-         stages {
         stage("Second step") {
             steps {
-                sh 'cd /test1 '
-                sh 'ls -al'
-                
-                
-                
+                sh 'cd /test1'
             }
         }
-     }
-   }
-
-
-
+    }
+}
