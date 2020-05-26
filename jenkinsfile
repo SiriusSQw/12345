@@ -14,7 +14,7 @@ pipeline {
         stage("First step") {
             steps {
                 sh 'ssh root@192.168.1.37 '
-                sh 'cd test1'
+                sh 'cd /test1'
                 sh 'echo "# 12345" >> README.md'
             }
         }
